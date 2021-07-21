@@ -1,0 +1,65 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+*:focus
+  outline: none
+
+html
+  font-size: 62.5%
+
+body
+  background-color: $bg
+  display: grid
+  place-content: center
+  font-size: 2.4rem
+  font-family: "Space Mono"
+  height: 100vh
+  overflow-x: hidden
+
+.logo
+  font-weight: bold
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: $very-dark-cyan
+  margin-top: 2rem
+
+  &__first
+    animation: fadeInRight 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards
+
+  &__second
+    animation: fadeInLeft 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards
+
+  & > span
+    letter-spacing: 1rem
+
+label
+  color: $very-dark-cyan
+  font-size: 1.5rem
+  font-weight: bold
+ 
+
+.icon
+  color: $dark-more-grayish-cyan
+  font-size: 2.5rem
+
+.selected
+  background-color: $primary-cyan!important
+  color: $very-dark-cyan!important
+
+.active
+  border: 2px solid $primary-cyan
+
+.active.selected
+  background: none!important
+
+.highlight
+  border: 2px solid $primary-cyan!important
+
+.disabled
+  opacity: 1
+  background-color: darken(desaturate($primary-cyan, 20%), 15%)!important
+  color: darken(desaturate($primary-cyan, 20%), 25%)!important
+

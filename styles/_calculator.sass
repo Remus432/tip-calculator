@@ -1,0 +1,166 @@
+@keyframes fadeInUp
+  0% 
+    transform: translateY(150px)
+    opacity: 0
+
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes fadeInLeft
+  0% 
+    transform: translateX(-100px)
+    opacity: 0
+
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes fadeInRight
+  0% 
+    transform: translateX(100px)
+    opacity: 0
+
+  100%
+    opacity: 1
+    transform: translateX(0)
+  
+.calculator
+  background-color: $white
+  border-radius: 25px
+  box-shadow: 0 2.5px 10px rgba($dark-grayish-cyan, 0.2)
+  margin: 2rem 0
+  padding: 2rem
+  animation: fadeInUp 1.2s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards
+
+  &__form
+    margin-bottom: 2rem
+
+  &__group
+    background-color: $light-grayish-cyan
+    border: 2px solid transparent
+    border-radius: .5rem
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 1rem 1.25rem
+    margin: 2rem 0
+
+    &-tips
+      cursor: pointer
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 2rem
+      margin: auto
+      width: 100%
+
+      &-amount
+        background: $very-dark-cyan
+        border-radius: .5rem
+        color: $white
+        padding: .5rem
+        text-align: center
+        font-weight: bold
+
+        &-custom
+          position: relative
+          background-color: $light-grayish-cyan
+          border-radius: .5rem
+          color: $dark-grayish-cyan
+          padding: .5rem
+          text-align: center
+          font-weight: bold
+
+          &-input
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+            text-align: right
+            border: none
+            background-color: $light-grayish-cyan!important
+            color: $very-dark-cyan
+            font-size: 2.5rem
+            padding: 1rem 1rem
+            font-weight: bold
+            position: absolute
+            display: none
+
+        &:hover
+          background-color: lighten($primary-cyan, 30%)
+          color: $very-dark-cyan
+
+        &:nth-of-type(6)
+          background-color: $light-grayish-cyan
+          color: $dark-grayish-cyan
+          
+
+    &-input
+      border: 2px solid transparent
+      background: none
+      color: $very-dark-cyan
+      text-align: right
+      font-size: 2rem
+      font-weight: bold
+      width: 90%
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button
+        margin-left: 1.5rem
+
+      &::placeholder
+        color: $very-dark-cyan
+
+  &__results
+    background-color: $very-dark-cyan
+    border-radius: 1.5rem
+    padding: 2.5rem
+
+    &-amount
+      color: $primary-cyan
+      font-weight: bold
+
+    &-label
+      display: flex
+      flex-direction: column
+
+    &-total, &-tip
+      display: flex
+      justify-content: space-between
+      margin: 1.5rem 0
+
+      & p
+        color: $white
+        font-size: 1.6rem
+
+      & span
+        color: $dark-more-grayish-cyan
+        font-size: 1.3rem
+
+    &-btn
+      background-color: $primary-cyan
+      border: none
+      border-radius: .5rem
+      color: $very-dark-cyan
+      cursor: pointer
+      font-size: 2rem
+      font-weight: bold
+      padding: 1rem
+      text-transform: uppercase
+      font-family: "Space Mono"
+      width: 100%
+      margin-top: 2rem
+
+      &:hover
+        background-color: lighten($primary-cyan, 35%)
+
+#people > i
+  color: $dark-more-grayish-cyan
+  font-size: 1.5rem
+
+#bill > i
+  font-size: .5rem
+
+#tip
+  background-color: $white
+  padding: 0
